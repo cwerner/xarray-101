@@ -1,0 +1,22 @@
+name: xarray-101
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - jupyterlab
+  - nodejs
+  - holoviews
+  - geoviews
+  - pandas
+  - xarray
+  - xarray-leaflet
+  - rioxarray
+  - datashader
+  - intake
+  - intake-geopandas
+  - intake-xarray
+  - matplotlib
+  - s3fs
+  
+
