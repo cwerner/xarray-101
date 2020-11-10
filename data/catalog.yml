@@ -1,0 +1,94 @@
+plugins:
+  source:
+    - module: intake_xarray
+    - module: intake_geopandas
+
+sources:
+
+
+  soil:
+    name: 'SOIL'
+    description: 'Default soil data for ldndctools (site file generation)'
+    driver: netcdf
+    parameters:
+      res:
+        default: 'LR'
+        allowed: ['LR', 'MR', 'HR']
+        description: 'Resolution (LR, MR or HR).'
+        type: str
+    args:
+      urlpath: 'simplecache::s3://ldndcdata/GLOBAL_WISESOIL_S1_{{res}}.nc'
+      storage_options:
+        s3:
+          anon: true
+          default_fill_cache: false
+          client_kwargs:
+            endpoint_url: 'https://s3.imk-ifu.kit.edu:8082'
+        simplecache:
+          cache_storage: '.cache'
+          same_names: true
+
+      chunks: {}
+
+  admin:
+    name: 'ADMIN'
+    description: 'Country and region layer from naturalearthdata'
+    driver: geopandasfile
+    parameters:
+      scale:
+        default: 10
+        allowed: [10, 50, 110]
+        description: 'Resolution (10, 50 or 110m).'
+        type: int
+    args:
+      urlpath: 'simplecache::https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/{{scale}}m/cultural/ne_{{scale}}m_admin_0_countries.zip'
+      use_fsspec: True
+      storage_options:
+        simplecache:
+              cache_storage: '.cache'
+              same_names: true
+
+  elevation:
+    name: 'ELEVATION'
+    description: 'Default elevations for climate file generation'
+    driver: netcdf
+    parameters:
+      res:
+        default: 'LR'
+        allowed: ['LR', 'MR']
+        description: 'Resolution (LR, MR).'
+        type: str
+    args:
+      urlpath: 'simplecache::s3://ldndcdata/misc/elevation_{{res}}.nc'
+      storage_options:
+        s3:
+          anon: true
+          default_fill_cache: false
+          client_kwargs:
+            endpoint_url: 'https://s3.imk-ifu.kit.edu:8082'
+        simplecache:
+          cache_storage: '.cache'
+          same_names: true
+
+  # climate_pgf3:
+  #   name: 'CLIMATE'
+  #   description: 'Princeton Global Fields 0.25x0.25 deg res daily data for ldndctools (climate file generation). Careful, VERY BIG!'
+  #   driver: netcdf
+  #   parameters:
+  #     year:
+  #       default: 2016
+  #       min: 1985
+  #       max: 2016
+  #       description: 'Year of daily climate data'
+  #       type: int
+  #   args:
+  #     urlpath: 'simplecache::s3://ldndcdata/climate/pgf3/pgf_025deg_v3_{{year}}.nc'
+  #     storage_options:
+  #       s3:
+  #         anon: true
+  #         default_fill_cache: false
+  #         client_kwargs:
+  #           endpoint_url: 'https://s3.imk-ifu.kit.edu:8082'
+  #       simplecache:
+  #         cache_storage: '.cache'
+  #         same_names: true
