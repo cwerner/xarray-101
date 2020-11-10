@@ -3,6 +3,9 @@ A quick tutorial into data processing with Python (covers the very basics, but i
 
 > :warning: **As with most things Python this repository stands on the shoulder of giants!** I used, modified and incorporated quite a few tutorial notebooks from various sources (mostly from the original package authors)! In order to streamline the tutorial I include them instead of merely linking them but credits are given in the various notebooks of this repo.   
 
+## Getting started
+If you don't have a Python environment on your machine yet, read the [getting started guide](./GETTING_STARTED.md) and install one with with [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Note that we need a modern python (>= 3.6) - I'd suggest 3.8.
+
 ## Notebooks
 
 ### Introduction
