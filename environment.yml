@@ -10,7 +10,6 @@ dependencies:
   - geoviews
   - pandas
   - xarray
-  - xarray-leaflet
   - rioxarray
   - datashader
   - intake
@@ -19,4 +18,3 @@ dependencies:
   - matplotlib
   - s3fs
   
-
