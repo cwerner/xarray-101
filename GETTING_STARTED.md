@@ -16,8 +16,6 @@ Downloads: [Windows](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windo
 
 Run the installers on your system and follow the instructions...
 
-## Installing Anaconda
-
 We use Anaconda since it not only provides python packages (you could install them using `pip` from [pypi.org](https://pypi.org), too) but also the often required system libraries that are used by these packages. This is not a big issue on Linux or Mac (if you use `homebrew` to install libraries on a Mac), but super helpful on Windows since installing these libraries manually there is a major hassle! 
 
 Once installed you need to initialize conda in your terminal (Windows users should find a new entry in the start menu already).
