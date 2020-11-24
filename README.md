@@ -35,3 +35,18 @@ Reading geotiffs and doing some remote sensing with xarray, rasterio and geopand
 
 #### Visualization
 An intro into the Holoviz/ PyViz ecosystem
+
+
+
+## Getting started before each session 🏁
+In order to be up to date do the following before each session.  
+
+1. Open your terminal app
+2. Change into this directory (this should be called `xarray-101` if you did not change it after cloning the repository)
+3. Do a `git pull` to update your local files with the latests from the repository (`git pull` is equivalent to a `git fetch`, followed by a `git merge`). If you get notified about conflicts I'd advice you to rename you notebooks that have a conflict with the server version (or delete them if you do not want to preserve the changes) and pull the sever state a second time.  
+A more elegant procedure is to:  
+    - download the latest from remote without trying to merge or rebase anything: `git fetch --all`
+    - save your current state in a branch: `git checkout -b backup-main`
+    - reset the master branch to what you just fetched: `git reset --hard origin/main`
+4. Activate our conda environment: `conda activate xarray-101`
+5. Start JupyterLab: `jupyter lab`
