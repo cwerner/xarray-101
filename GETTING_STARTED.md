@@ -100,6 +100,13 @@ Briefly about the files' content:
 
 > :warning: **Note:** You should be able to see if you have the right environment activated by a change of your terminals' prompt. You should see `(xarray-101)` in the terminal if you have activated our repository sucessfully.
 
+## Install JupyterLab extensions
+The JupyterLab GUI can be extended with labextensions. This enables a more rich IDE experience, but unfortuantely these packages depend on `node` and `javascript` so they have to be installed manually (and not automated via the `environment.yml` file).
+
+```
+jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-leaflet @pyviz/jupyterlab_pyviz
+```
+
 ## Start the JupyterHub environment
 
 We use JupyterHub for our course. This provides a interactive development environment (IDE) in the browser where we can run our python code.

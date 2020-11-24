@@ -5,9 +5,12 @@ channels:
 dependencies:
   - python=3.8
   - jupyterlab
+  - ipyleaflet
   - nodejs
   - holoviews
+  - hvplot
   - geoviews
+  - geopandas  
   - pandas
   - xarray
   - rioxarray

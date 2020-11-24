@@ -49,4 +49,5 @@ A more elegant procedure is to:
     - save your current state in a branch: `git checkout -b backup-main`
     - reset the master branch to what you just fetched: `git reset --hard origin/main`
 4. Activate our conda environment: `conda activate xarray-101`
-5. Start JupyterLab: `jupyter lab`
+5. In case the `environment.yml` file was updated we want to update the installed packages in our environment. You can do this with this command: `conda env update --file environment.yml` 
+6. Start JupyterLab: `jupyter lab`
