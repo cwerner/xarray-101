@@ -18,6 +18,8 @@ dependencies:
   - intake
   - intake-geopandas
   - intake-xarray
+  - intake-stac
   - matplotlib
   - s3fs
-  
+  - sat-search 
+

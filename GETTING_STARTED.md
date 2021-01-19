@@ -90,18 +90,18 @@ dependencies:
   - s3fs
 ```
 
-You can create the the environemt and install the packages using this file with  
+You can create the the environment and install the packages using this file with  
 `conda env create -f environment.yml`
 
 Briefly about the files' content:
 * the name defines the environments' name (use it to activate it)
 * a channel is a collection of packages (by default this is `default`, but newer and a larger selection of packages is contained in `conda-forge`; that's why we put it on top so it takes priority)
-* dependencies list all the packages we want to install into our envrionment
+* dependencies list all the packages we want to install into our environment
 
-> :warning: **Note:** You should be able to see if you have the right environment activated by a change of your terminals' prompt. You should see `(xarray-101)` in the terminal if you have activated our repository sucessfully.
+> :warning: **Note:** You should be able to see if you have the right environment activated by a change of your terminals' prompt. You should see `(xarray-101)` in the terminal if you have activated our repository successfully.
 
 ## Install JupyterLab extensions
-The JupyterLab GUI can be extended with labextensions. This enables a more rich IDE experience, but unfortuantely these packages depend on `node` and `javascript` so they have to be installed manually (and not automated via the `environment.yml` file).
+The JupyterLab GUI can be extended with labextensions. This enables a more rich IDE experience, but unfortunately these packages depend on `node` and `javascript` so they have to be installed manually (and not automated via the `environment.yml` file).
 
 ```
 jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-leaflet @pyviz/jupyterlab_pyviz
